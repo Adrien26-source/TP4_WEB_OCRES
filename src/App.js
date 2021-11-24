@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './logo.svg';
 import './App.css';
-import Profile from './Profile';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import Profil from './Profil';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -13,12 +14,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         </header>
-               <Switch>
+               <Routes>
                     <Route exact path="/" render={() => (
-                        <Redirect to="/profilelist"/>
+                        <Navigate to="/profillist"/>
                     )}/>
-                    <Route exact path='/profilelist' component={Profile}/>
-                </Switch>
+                    <Route exact path='/profillist' element={Profil}/>
+                </Routes>
 
             </div>
         </Router>

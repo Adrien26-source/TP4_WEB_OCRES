@@ -1,51 +1,27 @@
-import React, {Component} from "react";
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
-import ProfilDetails from './ProfilDetails'
-import axios from 'axios'
+import React, { Component } from 'react';
 
-export default class Profil extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedProfil: 1
-        }
+class Profil extends Component {
+    
+    constructor(props){
+        super(props); 
     }
 
-    ///appel de fonction : le composant se charge
-    componentDidMount() {
-        this.getProfilsData();
+    render(){
+      return (
+      <div className="card card-body mb-3 mt-3" style={{background: "#3b5998"}}>
+          <ul className="list-group">
+              <h3 align="center" className="card-title" style={{color: "white"}}>Profil</h3>
+              <div className="row justify-content-center">
+                <img src={this.props.infos.photo} className="card-img-top" style={{width: '200px'}} />
+              </div>
+              <li className="list-group-item" style={{background: "#87CEFA"}}><b>Prenom : </b>{this.props.infos.prenom}</li>
+              <li className="list-group-item" style={{background: "#87CEFA"}}><b>Nom : </b>{this.props.infos.nom}</li>
+              <li className="list-group-item" style={{background: "#87CEFA"}}><b>Date de naissance : </b>{this.props.infos.date}</li> 
+              <a className="list-group-item" style={{background: "#87CEFA"}}><button className="btn btn-success"> Changer le style </button></a>             
+          </ul>
+      </div>   
+      )
     }
+  }
 
-    /// pour avoir les données de profils de json
-    getProfilsData() {
-        axios.get('asset/samplejson/profilslist.json').then(response => {
-            this.setState({profilList: response})
-        });
-    }
-
-    render() {
-        ///si pas de données
-        if (!this.state.profilList)
-            return (<p>Loading data</p>);
-
-        return (
-
-            <div className="container">
-                {
-               }
-                <div className="text-right">
-                    {this.state.profilList.data.map(profil =>
-                        <Button variant="outline-dark" onClick={() => this.setState({selectedProfil: profil.id})}>
-                            Profil {profil.id} </Button>)}
-                </div>
-                {
-            // Details du profil
-               }
-                    <ProfilDetails className="Profil-content" val={this.state.selectedProfil}/>
-
-            </div>
-        );
-    }
-}
+export default Profil; 

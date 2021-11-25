@@ -37,4 +37,12 @@
   }
 }
 
+#navig{
+  height: 50px;
+  text-align: center;
+}
+
+#profil{
+  max-width: 60%; 
+}
 

@@ -1,0 +1,21 @@
+nav {
+    float: bottom;
+    padding-top: 20px;
+    font-size: 20px;
+    height: 50px;
+    width: 1500px;
+    background-color: turquoise;
+    color:black;
+    margin-left: 10px;
+    text-align: left;
+     
+}
+
+
+a{
+    margin-left: 350px;
+    width:210px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}

@@ -18,8 +18,8 @@ class App extends Component {
             prenom: 'Frank', 
             date: '3 juin 1960',
             background: "black",
-            photo:'https://key0.cc/images/preview/111894_dd4a85595fa29cdf7e5e944118f9faa2.png',
-            Commentaire: "Bonsoir les enfants !",
+            photo:'https://img1.freepng.fr/20180602/icj/kisspng-aged-care-old-age-nursing-home-care-health-care-ho-senior-citizens-5b12b1d63465d1.9049591415279518302146.jpg',
+            Commentaire: "Bonsoir les enfants c'est Franky !",
             likes: 0
           },
           {
@@ -28,7 +28,7 @@ class App extends Component {
             prenom: 'Arnaud', 
             date: '14 juillet 1999',
             background: "black",
-            photo: 'https://cdn.pixabay.com/photo/2012/04/18/15/59/man-37411_960_720.png',
+            photo: 'https://www.loyer-avocat.com/photos/422x340/homme-d-affaire.png',
             Commentaire: "Les affaires sont les affaires",
             likes: 0
           },
@@ -39,7 +39,7 @@ class App extends Component {
             date: '13 Janvier 1975',
             background: "black",
             photo: 'https://img1.freepng.fr/20180812/vsz/kisspng-businessperson-metal-roof-single-person-image-about-us-hph-contadores-5b70e9207497e9.8813696115341263684776.jpg', 
-            Commentaire: "Championnnnn du monde !!!!!!",
+            Commentaire: "On est Championnnnnssssss du monde !!!!!!",
             likes: 0
           }
         ], 
@@ -59,10 +59,11 @@ class App extends Component {
       this.setState({profil: compteur})
     }
     
+    
     render(){
       return (
         <div>
-          <nav className="navbar navbar-extend-sm navbar-dark bg-dark py-0 justify-content-end" id="navig">
+          <nav className="navbar navbar-extend-sm py-0 justify-content-end" id="nav"> Adrien Cherqui TD04 ING4
           {this.state.profil.map((profil)=>
             <ChangeProfil
               key={profil.id}
@@ -90,4 +91,4 @@ class App extends Component {
     }
   }
       
-      export default App;
+export default App;

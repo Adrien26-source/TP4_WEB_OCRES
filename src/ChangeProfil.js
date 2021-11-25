@@ -5,7 +5,7 @@ function ChangeProfil(props) {
 
     return (
         <div className="px-1">
-            <button className="btn btn-danger" onClick={() => parameter(profil.id)}> {profil.prenom}</button>
+            <button className="btn btn-warning" onClick={() => parameter(profil.id)}> {profil.nom} {profil.prenom}</button>
         </div>
     );
 }

@@ -18,8 +18,8 @@ class Profil extends Component {
               <li className="list-group-item" style={{background: "grey"}}><b>Prénom : </b>{this.props.infos.prenom}</li>
               <li className="list-group-item" style={{background: "grey"}}><b>Nom : </b>{this.props.infos.nom}</li>
               <li className="list-group-item" style={{background: "grey"}}><b>Date de naissance : </b>{this.props.infos.date}</li> 
-              <a className="list-group-item" style={{background: "orange"}}><button className="btn btn-danger"> Changement du style </button></a> 
-                          
+              <a className="list-group-item" style={{background: "orange"}}><button className="btn btn-danger"> Changement du style </button></a>
+                           
           </ul>
       </div>   
       )
